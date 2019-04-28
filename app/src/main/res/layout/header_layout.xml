@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="180dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/NavImageID"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/circle_default"
+        android:layout_margin="20dp"
+        />
+
+    <TextView
+        android:layout_below="@id/NavImageID"
+        android:id="@+id/NavnameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:text="Mr Mitali Biswas"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/NavEmailID"
+        android:layout_below="@id/NavnameID"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:text="DingoNet123@gmail.com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="0.5dp"
+        android:background="#000"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

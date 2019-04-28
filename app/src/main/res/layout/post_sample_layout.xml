@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/caed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+
+
+        xmlns:card_view="http://schemas.android.com/tools"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        app:cardBackgroundColor="#FAFBFD"
+        app:cardElevation="8dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+       <RelativeLayout
+           android:id="@+id/one"
+           android:layout_margin="5dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:layout_width="60dp"
+               android:id="@+id/SPostImageID"
+               android:layout_height="60dp"
+               android:src="@drawable/default_image"
+               />
+
+           <TextView
+               android:id="@+id/SPostnameID"
+               android:layout_width="wrap_content"
+               android:textSize="18dp"
+               android:textStyle="bold"
+               android:layout_marginTop="10dp"
+               android:textAllCaps="true"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="15dp"
+               android:layout_toRightOf="@id/SPostImageID"
+               />
+
+           <TextView
+               android:id="@+id/CPostID"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toRightOf="@id/SPostImageID"
+               android:layout_below="@id/SPostnameID"
+               android:layout_marginLeft="15dp"
+               android:textSize="15dp"
+               android:layout_marginTop="10dp"
+               />
+
+           <TextView
+               android:id="@+id/CpostDateID"
+               android:layout_width="wrap_content"
+               android:layout_below="@id/SPostnameID"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginLeft="10dp"
+               android:textStyle="bold"
+               android:textSize="16dp"
+               android:layout_toRightOf="@id/CPostID"
+               />
+
+
+           <TextView
+               android:id="@+id/CpostTimeID"
+               android:layout_width="wrap_content"
+               android:layout_below="@id/SPostnameID"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginLeft="10dp"
+               android:textStyle="bold"
+               android:textSize="16dp"
+               android:layout_toRightOf="@id/CpostDateID"
+               />
+
+           <TextView
+               android:id="@+id/CPostDetailsID"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/SPostImageID"
+               android:textSize="17dp"
+               android:textAllCaps="false"
+               android:textStyle="bold"
+               android:layout_marginTop="5dp"
+               android:layout_marginLeft="10dp"
+               />
+
+           <ImageView
+               android:id="@+id/CPostImageID"
+               android:layout_width="match_parent"
+               android:layout_marginTop="5dp"
+               android:layout_height="210dp"
+               android:src="@drawable/waiting"
+               android:scaleType="centerCrop"
+               android:layout_below="@id/CPostDetailsID"
+               />
+
+
+           <RelativeLayout
+               android:layout_below="@id/CPostImageID"
+               android:layout_width="match_parent"
+               android:layout_marginTop="2dp"
+               android:layout_height="50dp">
+
+               <ImageButton
+                   android:id="@+id/LovePIC"
+                   android:layout_centerVertical="true"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_marginLeft="10dp"
+                   android:background="@drawable/like"
+                   />
+
+               <TextView
+                   android:id="@+id/LikeCountTextID"
+                   android:layout_width="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:text="0 Like"
+                   android:textStyle="bold"
+                   android:textSize="18dp"
+                   android:layout_marginLeft="15dp"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/LovePIC"
+                   />
+
+
+               <ImageView
+                   android:id="@+id/CommentID"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/chatlogo"
+                   android:layout_marginRight="15dp"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentRight="true"
+                   />
+
+           </RelativeLayout>
+
+
+       </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+</RelativeLayout>

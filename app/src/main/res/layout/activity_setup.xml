@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupActivity">
+
+
+
+    <ImageView
+        android:id="@+id/ListID"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/sort_button"
+        />
+
+    <TextView
+        android:id="@+id/TextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Need SetUp Your Profile"
+        android:layout_marginTop="46dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/ListID"
+        />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ProfileImageID"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/TextID"
+        android:src="@drawable/default_image"
+        />
+
+    <TextView
+        android:id="@+id/DingoID"
+        android:textSize="30dp"
+        android:text="Dingo"
+        android:textColor="#23C2C1"
+        android:typeface="monospace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ProfileImageID"
+        android:layout_marginTop="15dp"
+        />
+
+    <EditText
+        android:id="@+id/UserNameID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:inputType="text"
+        android:textSize="18dp"
+        android:singleLine="true"
+        android:hint="Username"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/DingoID"
+        android:layout_marginTop="30dp"
+        android:padding="15dp"
+        android:background="@drawable/edittext_desian"
+        />
+
+    <EditText
+        android:id="@+id/FullnameID"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textSize="18dp"
+        android:background="@drawable/edittext_desian"
+        android:hint="Enter Fullname"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:padding="15dp"
+        android:layout_below="@id/UserNameID"
+        />
+
+    <EditText
+        android:id="@+id/AddressID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@id/FullnameID"
+        android:background="@drawable/edittext_desian"
+        android:padding="15dp"
+        android:textSize="18dp"
+        android:singleLine="true"
+        android:hint="Address"
+        />
+
+
+    <Button
+        android:id="@+id/SaveID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AddressID"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="25dp"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:text="Save"
+        android:background="@drawable/save_desian"
+        android:layout_marginLeft="25dp"
+        />
+
+
+</RelativeLayout>

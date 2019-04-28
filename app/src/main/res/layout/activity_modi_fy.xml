@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModiFyActivity">
+
+
+    <ImageView
+        android:id="@+id/ModifyImageID"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:scaleType="centerCrop"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:id="@+id/EditButtonID"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="240dp"
+        android:src="@drawable/edit_icon"
+        />
+
+    <TextView
+        android:id="@+id/MnameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/white"
+        />
+
+
+    <TextView
+        android:id="@+id/PostID"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Post Descptrion"
+        android:layout_below="@id/ModifyImageID"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/ModifyPostID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PostID"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="16dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/dateID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ModifyPostID"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Post Time And Date"
+        />
+
+    <TextView
+        android:id="@+id/ModifydateID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateID"
+        android:textSize="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/MtimeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ModifydateID"
+        android:layout_below="@id/dateID"
+        android:textSize="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="18dp"
+        android:textColor="@android:color/white"
+        android:text="Remove"
+        android:padding="10dp"
+        android:id="@+id/RemvoeButtonID"
+        android:textAllCaps="false"
+        android:background="@drawable/save_desian"
+        />
+
+
+
+
+</RelativeLayout>

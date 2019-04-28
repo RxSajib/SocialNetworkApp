@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FriendRequestActivity">
+
+
+    <include
+        android:id="@+id/RequestToolbarID"
+        layout="@layout/toolbar_layout"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/layoutone"
+        android:layout_below="@id/RequestToolbarID"
+        android:layout_width="match_parent"
+        android:background="#EBF0F3"
+        android:layout_height="140dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/RequestImageID"
+            android:layout_width="90dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_height="90dp"
+            android:src="@drawable/default_image"
+            />
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/RequestImageID"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/ReguestnameID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22dp"
+                    android:layout_marginTop="25dp"
+                    />
+
+
+                <Button
+                    android:id="@+id/ReguestAccepectButtonID"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                   android:layout_below="@+id/ReguestnameID"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:padding="2dp"
+                    android:textSize="16dp"
+                    android:textAllCaps="false"
+                    android:text="Request"
+                    android:background="@drawable/accepect_desian"
+                    />
+
+
+                   <Button
+                    android:id="@+id/ReguestRemoveButtonID"
+                       android:padding="2dp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                   android:layout_below="@+id/ReguestnameID"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#fff"
+                       android:textAllCaps="false"
+                       android:layout_marginRight="10dp"
+                    android:textSize="16dp"
+                       android:layout_toRightOf="@id/ReguestAccepectButtonID"
+                    android:text="Remove"
+                    android:background="@drawable/remove_button"
+                    />
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/layoutone"
+        android:background="#F1F5F8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/flagicon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/flag"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                />
+
+            <TextView
+                android:id="@+id/CountryTextID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/flagicon"
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/two"
+            android:layout_below="@id/one"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/seximage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/gender"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                />
+
+            <TextView
+                android:id="@+id/GenderID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/seximage"
+                />
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/three"
+            android:layout_below="@+id/two"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/birthimage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/birthday"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                />
+
+            <TextView
+                android:id="@+id/DateofburthID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/birthimage"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/four"
+            android:layout_below="@+id/three"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/genderimage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/relationship"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                />
+
+            <TextView
+                android:id="@+id/relanshipID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/genderimage"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/five"
+            android:layout_below="@+id/four"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/cardimage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/id_card"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                />
+
+            <TextView
+                android:id="@+id/IDnametextID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/cardimage"
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/infoimage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/info"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                />
+
+            <TextView
+                android:id="@+id/statasID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/infoimage"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

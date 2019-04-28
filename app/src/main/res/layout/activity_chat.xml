@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/ChatToolbarID"
+            android:layout_width="match_parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:titleTextColor="@android:color/white"
+            >
+
+
+         <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+             <de.hdodenhof.circleimageview.CircleImageView
+                 android:id="@+id/CurrentImageID"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_marginEnd="10dp"
+                 android:layout_gravity="end"
+                 android:src="@drawable/default_image"
+                 />
+
+
+             <TextView
+                 android:id="@+id/CurrentTextID"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textSize="20dp"
+                 android:textColor="@android:color/white"
+                 android:textStyle="bold"
+                 android:layout_gravity="center_vertical"
+                 />
+
+
+         </FrameLayout>
+
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@id/ChatToolbarID"
+        android:layout_above="@id/PickImageID"
+        android:layout_height="match_parent">
+
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#616161"
+        android:layout_above="@id/PickImageID"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        />
+
+    <ImageView
+        android:id="@+id/PickImageID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image"
+        android:layout_alignParentBottom="true"
+        />
+
+
+    <EditText
+        android:id="@+id/PickMessegeID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_toRightOf="@id/PickImageID"
+        android:layout_alignParentBottom="true"
+        android:textSize="20dp"
+        android:background="@drawable/null_edittext"
+        android:hint="Enter Your Message"
+        android:layout_toLeftOf="@+id/SendID"
+        android:inputType="text"
+        />
+
+    <ImageView
+        android:id="@+id/SendID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:src="@drawable/sendicon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

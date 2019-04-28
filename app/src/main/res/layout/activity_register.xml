@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+
+    <TextView
+        android:id="@+id/RegistertextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:textSize="30dp"
+        android:textColor="#4756CA"
+        android:textStyle="bold"
+        android:text="Register to Dingo App"
+        />
+
+
+    <EditText
+        android:id="@+id/NewEmailID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:padding="15dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/edittext_desian"
+        android:hint="Enter Email"
+        android:layout_below="@id/RegistertextID"
+        android:layout_marginTop="40dp"
+        />
+
+     <EditText
+        android:id="@+id/NewPasswordID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_desian"
+        android:hint="Enter Password"
+        android:layout_below="@id/NewEmailID"
+        android:layout_marginTop="15dp"
+        />
+
+ <EditText
+        android:id="@+id/NewConFrimPasswordID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_desian"
+        android:hint="Retype Password"
+        android:layout_below="@id/NewPasswordID"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/RegisterButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@id/NewConFrimPasswordID"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_desian"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:text="Register"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/AlreadyAccButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RegisterButtonID"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:textColor="#0482C6"
+        android:text="Already have Account"
+        android:textSize="18dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/registerdesian"
+        />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/BackButtonID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/back_icon"
+        />
+
+
+
+
+
+</RelativeLayout>

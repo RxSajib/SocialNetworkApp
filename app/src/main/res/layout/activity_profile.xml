@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="110dp"
+        android:id="@+id/SettingImageID"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/default_image"
+        />
+    
+    <TextView
+        android:id="@+id/basic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:text="Basic Settings"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/SettingImageID"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/basic"
+        android:layout_marginTop="10dp"
+        android:id="@+id/card1"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:background="#C7C6C6"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_marginTop="15dp"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                />
+
+
+            <EditText
+                android:id="@+id/nameID"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:singleLine="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="18dp"
+                android:hint="Your Name"
+                android:inputType="text"
+                android:background="@drawable/null_edittext"
+                android:layout_toRightOf="@id/view"
+                />
+            
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#C7C6C6"
+                android:layout_marginTop="55dp"
+                />
+
+            <EditText
+                android:id="@+id/CountryID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:hint="Your Country"
+                android:singleLine="true"
+                android:layout_below="@id/view1"
+                android:background="@drawable/null_edittext"
+                android:layout_toRightOf="@+id/view"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:layout_below="@id/view1"
+                android:layout_marginTop="15dp"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#C7C6C6"
+                android:layout_marginTop="55dp"
+                android:layout_below="@id/view1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:layout_marginTop="15dp"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/view2"
+                />
+
+            <EditText
+                android:id="@+id/GenderTextID"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="18dp"
+                android:singleLine="true"
+                android:hint="Gender"
+                android:background="@drawable/null_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view2"
+                android:layout_toRightOf="@+id/view"
+                />
+
+
+         <View
+             android:id="@+id/view3"
+             android:layout_width="match_parent"
+             android:layout_height="0.5dp"
+             android:layout_below="@id/view2"
+             android:layout_marginTop="55dp"
+             android:background="#C7C6C6"
+             />
+
+            <TextView
+                android:id="@+id/CalenderID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_below="@+id/view3"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/view"
+                android:layout_marginLeft="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birth"
+                android:layout_marginTop="15dp"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/view3"
+                />
+        
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:layout_below="@id/card1"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:textSize="18dp"
+        android:id="@+id/te1"
+        android:textAllCaps="false"
+        android:text="Account Settings"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/te1"
+        android:layout_height="165dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+           <View
+               android:id="@+id/lel1"
+               android:layout_width="match_parent"
+               android:layout_height="0.5dp"
+               android:layout_marginTop="55dp"
+               android:background="#C7C6C6"
+               />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="18dp"
+                android:text="Relationship"
+                />
+
+            <EditText
+                android:id="@+id/RelationshipID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:singleLine="true"
+                android:hint="Your RelationshipID"
+                android:background="@drawable/null_edittext"
+                android:layout_toRightOf="@+id/lell2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/lel1"
+                android:layout_marginLeft="15dp"
+                android:text="ID Name"
+                android:textSize="18dp"
+                />
+
+            <EditText
+                android:id="@+id/IDNameID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:hint="Your ID Nmae"
+                android:singleLine="true"
+                android:background="@drawable/null_edittext"
+                android:layout_below="@id/lel1"
+                android:layout_toRightOf="@+id/lell2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                />
+
+             <View
+               android:id="@+id/lel2"
+               android:layout_width="match_parent"
+               android:layout_height="0.5dp"
+                 android:layout_below="@id/lel1"
+               android:layout_marginTop="55dp"
+               android:background="#C7C6C6"
+               />
+
+            <View
+                android:id="@+id/lell2"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:background="#C7C6C6"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/lel2"
+                android:layout_marginLeft="15dp"
+                android:text="Post"
+                />
+
+            <EditText
+                android:id="@+id/PostDetailsID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:singleLine="true"
+                android:hint="Your Stats"
+                android:layout_below="@id/lel2"
+                android:background="@drawable/null_edittext"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/lell2"
+                android:layout_marginLeft="15dp"
+                />
+
+
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/check_icon"
+        android:id="@+id/SsaveID"
+        />
+    
+</RelativeLayout>

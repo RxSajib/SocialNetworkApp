@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity">
+
+
+    <include
+        android:id="@+id/AddPostToolbarID"
+        layout="@layout/toolbar_layout"/>
+
+
+
+    <ImageView
+        android:id="@+id/PostImageID"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@id/AddPostToolbarID"
+        android:scaleType="centerCrop"
+        android:src="@drawable/productimage"
+        />
+
+    <EditText
+        android:id="@+id/PostMessegeID"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/PostImageID"
+        android:layout_marginTop="30dp"
+        android:hint="Enetr Your Messege"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="@drawable/edittext_desian"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:id="@+id/PostButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:text="Post"
+        android:background="@drawable/save_desian"
+        />
+
+</RelativeLayout>

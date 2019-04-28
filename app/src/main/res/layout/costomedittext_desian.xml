@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:id="@+id/ComtomEditID"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/ComstionEditnameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="20dp"
+        />
+
+    <EditText
+        android:id="@+id/CostonPostID"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:hint="Enter Your New Post"
+        android:padding="8dp"
+        android:layout_below="@+id/ComstionEditnameID"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edittext_desian"
+        />
+
+    <Button
+        android:id="@+id/CostionPostSaveButtonID"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/save_desian"
+        android:textColor="@android:color/white"
+        android:text="Save"
+        android:textSize="18dp"
+        android:textAllCaps="false"
+        android:layout_below="@id/CostonPostID"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/CostionPostSaveButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"></LinearLayout>
+
+
+
+</RelativeLayout>

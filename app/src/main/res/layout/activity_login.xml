@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/WelcomeTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#4756CA"
+        android:text="Welcome to Dingo App"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/LinierLayoutID"
+        android:layout_below="@id/WelcomeTextID"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="100dp">
+
+
+        <Button
+            android:id="@+id/FacebookButtonID"
+            android:layout_width="130dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textAllCaps="true"
+            android:text="Facebook"
+            android:layout_height="wrap_content"
+            android:background="@drawable/facebook_buttondesian"
+            />
+ <Button
+            android:id="@+id/GoogleButtonID"
+            android:layout_width="130dp"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="true"
+            android:text="Google+"
+            android:layout_height="wrap_content"
+            android:background="@drawable/googlebutton_desian"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/OR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LinierLayoutID"
+        android:text="OR"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/EmailID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/OR"
+        android:padding="15dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="25dp"
+        android:hint="Email"
+        android:textSize="17dp"
+        android:background="@drawable/edittext_desian"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/PasswordID"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/edittext_desian"
+        android:padding="15dp"
+        android:textSize="17dp"
+        android:hint="Password"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EmailID"
+        />
+
+    <Button
+        android:id="@+id/LoginButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/login_desian"
+        android:padding="12dp"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:layout_below="@id/PasswordID"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:id="@+id/ForgotTextID"
+        android:layout_below="@+id/LoginButtonID"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Forgot Password?"
+        android:textSize="17dp" />
+
+    <Button
+        android:id="@+id/RegisterNowID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:padding="12dp"
+        android:textColor="#00A6BC"
+        android:layout_marginRight="25dp"
+        android:textSize="18dp"
+        android:text="No Account? Register Now"
+        android:layout_below="@id/ForgotTextID"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/registerdesian"
+        />
+
+
+
+
+
+
+</RelativeLayout>
