@@ -8,4 +8,7 @@
     <color name="alarter_colour">#00D2DD</color>
     <color name="alarter_wrong">#FF6464</color>
 
+    <color name="messegereciver">#000080</color>
+    <color name="messegesender">#FF0000</color>
+
 </resources>

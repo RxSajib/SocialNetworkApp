@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="60dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/MessegePicID"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+       android:src="@drawable/default_image"
+        />
+
+    <TextView
+        android:id="@+id/ReciverMessegeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@id/MessegePicID"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:textStyle="normal"
+        android:textColor="@android:color/white"
+        android:background="@drawable/reciver_desian"
+        android:text="Hello how are you"
+        />
+
+    <TextView
+        android:id="@+id/SenderMessegeID"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/sender_desian"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        android:text="I am fine"
+        />
+
+
+</RelativeLayout>
