@@ -17,6 +17,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,8 +25,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -46,6 +49,9 @@ public class ChatActivity extends AppCompatActivity {
     private DatabaseReference Roodref;
     private String CurrentDate, CurrentTime;
     private RecyclerView MessegeView;
+    private List<Message> messageslistval = new ArrayList<>();
+    private LinearLayoutManager linearLayoutManager;
+    private MessegeAdapter messageadapter;
 
 
     @Override
@@ -132,6 +138,8 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
+        fatchmessage();
+
 
         MuserDatabase.child(friendsid).addValueEventListener(new ValueEventListener() {
             @Override
@@ -162,6 +170,47 @@ public class ChatActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+        ///read message
+        messageadapter = new MessegeAdapter(messageslistval);
+        MessegeView.setAdapter(messageadapter);
+    }
+
+    private void fatchmessage(){
+
+        Roodref.child("Message").child(CurrentuserID).child(friendsid)
+                .addChildEventListener(new ChildEventListener() {
+                    @Override
+                    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+                        Message message = dataSnapshot.getValue(Message.class);
+                        messageslistval.add(message);
+                        messageadapter.notifyDataSetChanged();
+
+                    }
+
+                    @Override
+                    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                    }
+
+                    @Override
+                    public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                    }
+
+                    @Override
+                    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
     }
 
     @Override

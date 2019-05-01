@@ -11,4 +11,6 @@
     <color name="messegereciver">#000080</color>
     <color name="messegesender">#FF0000</color>
 
+    <color name="white">#fff</color>
+
 </resources>

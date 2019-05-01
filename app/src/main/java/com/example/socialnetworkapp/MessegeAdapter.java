@@ -1,8 +1,10 @@
 package com.example.socialnetworkapp;
 
 
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,12 +69,40 @@ public class MessegeAdapter extends RecyclerView.Adapter<MessegeAdapter.MessegeV
             public void onCancelled(DatabaseError databaseError) {
 
             }
+
         });
+
+        if(frommessegetype.equals("text")){
+
+            messegeViewHolder.recivermessege.setVisibility(View.INVISIBLE);
+            messegeViewHolder.reciverimage.setVisibility(View.INVISIBLE);
+
+            if (messageUserID.equals(messegesenderID)) {
+
+                messegeViewHolder.sendermessege.setBackgroundResource(R.drawable.sender_desian);
+                messegeViewHolder.sendermessege.setTextColor(Color.WHITE);
+                messegeViewHolder.sendermessege.setText(message.getMessage());
+                messegeViewHolder.sendermessege.setGravity(Gravity.LEFT);
+
+
+            }
+            else {
+
+                messegeViewHolder.sendermessege.setVisibility(View.INVISIBLE);
+                messegeViewHolder.recivermessege.setVisibility(View.VISIBLE);
+                messegeViewHolder.reciverimage.setVisibility(View.VISIBLE);
+
+                messegeViewHolder.recivermessege.setBackgroundResource(R.drawable.reciver_desian);
+                messegeViewHolder.recivermessege.setTextColor(Color.WHITE);
+                messegeViewHolder.recivermessege.setText(message.getMessage());
+                messegeViewHolder.recivermessege.setGravity(Gravity.RIGHT);
+            }
+        }
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return usermessegelost.size();
     }
 
     public class MessegeViewHolder extends RecyclerView.ViewHolder {
