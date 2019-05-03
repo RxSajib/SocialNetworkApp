@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -41,27 +44,108 @@ import es.dmoral.toasty.Toasty;
 
 public class SetupActivity extends AppCompatActivity {
 
-    private CircleImageView Mimage;
+    private ImageView Mimage;
     private EditText Username;
     private EditText Fullname;
     private EditText Address;
-    private Button SaveButton;
+    private FloatingActionButton SaveButton;
     private Uri imageuri = null;
     private DatabaseReference Muserdatabase;
     private FirebaseAuth Mauth;
     private String CurrentUserID;
     private ProgressDialog Mprogress;
     private StorageReference Muserimagestore;
+    private TextView postcount;
+    private DatabaseReference FriendsCountDatabase;
+    private TextView friendscount;
+    private int Friends;
+    private TextView friend;
+
+    private DatabaseReference postcountref;
+    private int countpost = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup);
 
+        postcountref = FirebaseDatabase.getInstance().getReference().child("Posts");
         Muserimagestore = FirebaseStorage.getInstance().getReference().child("User_image");
         Mprogress = new ProgressDialog(SetupActivity.this);
         Mauth = FirebaseAuth.getInstance();
         CurrentUserID = Mauth.getCurrentUser().getUid();
+        postcount = findViewById(R.id.PostCountrID);
+        FriendsCountDatabase = FirebaseDatabase.getInstance().getReference().child("Friends");
+        friendscount = findViewById(R.id.FriendsCountrID);
+        friend = findViewById(R.id.FriendCLickID);
+
+        friend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotofriends = new Intent(SetupActivity.this, FriendActivity.class);
+                startActivity(gotofriends);
+            }
+        });
+
+        ///counting all post
+        postcountref.orderByChild("uid").startAt(CurrentUserID)
+                .endAt(CurrentUserID)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        if(dataSnapshot.exists()){
+                            countpost = (int)dataSnapshot.getChildrenCount();
+                            postcount.setText(Integer.toString(countpost));
+                        }
+                        else{
+                            postcount.setText("0");
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
+        ///Count all friends
+        FriendsCountDatabase.child(CurrentUserID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.exists()){
+
+                    Friends = (int)dataSnapshot.getChildrenCount();
+                    friendscount.setText(Integer.toString(Friends));
+                }
+                else {
+                    friendscount.setText("0");
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        postcount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String currentPost = postcount.getText().toString();
+                if(currentPost.equals("0")){
+                    Toasty.info(SetupActivity.this, "your didn't have any post", Toasty.LENGTH_LONG).show();
+                }
+                else {
+                    Intent intent = new Intent(SetupActivity.this, UserPostAcitvity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
 
 
         Muserdatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(CurrentUserID);

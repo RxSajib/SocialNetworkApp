@@ -29,6 +29,21 @@
              android:layout_height="match_parent">
 
 
+             <ImageView
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                android:src="@drawable/callicon"
+                 android:layout_gravity="center"
+                 />
+
+             <ImageView
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:src="@drawable/video_icon"
+                 android:layout_gravity="center"
+                 android:layout_marginStart="50dp"
+                 />
+
              <de.hdodenhof.circleimageview.CircleImageView
                  android:id="@+id/CurrentImageID"
                  android:layout_width="40dp"

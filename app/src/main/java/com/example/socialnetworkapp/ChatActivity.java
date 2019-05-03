@@ -90,7 +90,7 @@ public class ChatActivity extends AppCompatActivity {
                 }
                 else {
 
-                    messegetext.setText(null);
+                    messegetext.setText("");
                     String messegesenderref = "Message/"+CurrentuserID+"/"+friendsid;
                     String messegereciverref = "Message/"+friendsid+"/"+CurrentuserID;
 
